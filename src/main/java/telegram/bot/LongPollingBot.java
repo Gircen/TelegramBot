@@ -21,12 +21,13 @@ public class LongPollingBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
         try {
-            SendMessage sendMessage = new SendMessage();
-            sendMessage.setChatId(String.valueOf(update.getMessage().getChatId()));
-            StringBuilder stringBuilder = new StringBuilder();
-            stringBuilder.append("hi ").append(update.getMessage().getChat().getFirstName()).append(" ").append(update.getMessage().getChat().getLastName());
-            sendMessage.setText(stringBuilder.toString());
-            execute(sendMessage);
+//            SendMessage sendMessage = new SendMessage();
+//            sendMessage.setChatId(String.valueOf(update.getMessage().getChatId()));
+//            StringBuilder stringBuilder = new StringBuilder();
+//            stringBuilder.append("hi ").append(update.getMessage().getChat().getFirstName()).append(" ").append(update.getMessage().getChat().getLastName());
+//            sendMessage.setText(stringBuilder.toString());
+//            execute(sendMessage);
+
         } catch (TelegramApiException e) {
             e.printStackTrace();
         }
